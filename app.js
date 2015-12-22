@@ -20,6 +20,7 @@ function imdbSearch(){
      searchUrl = "http://www.omdbapi.com/?s=" + userInput
 
      $.get(searchUrl, function( data ) {
+      console.log(data)
        results = data.Search;
        results.forEach(function(item){
          outputArea.append("<p>" + item.Title + "</p>")
